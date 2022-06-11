@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>momentum</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="player">
+        <div class="players-audio">
+          <div class="player-controls">
+            <div class="player-buttons">
+              <button class="play-prev player-icon"></button>
+              <button class="play player-icon"></button>
+              <button class="play-next player-icon"></button>
+            </div>
+            <div class="slider_container">
+              <i class="volume-down"></i>
+              <input type="range" min="1" max="100" value="99" class="volume_slider" />
+              <i class="volume-up"></i>
+            </div>
+          </div>
+          <div class="slider_container">
+            <div class="current-time">00:00</div>
+            <input type="range" min="1" max="100" value="0" class="seek_slider" />
+            <div class="total-duration">00:00</div>
+          </div>
+          <audio class="audio-player"></audio>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="weather">
+        <input type="text" class="city" value="Минск" />
+        <i id class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+      </div>
+      <time class="time"></time>
+      <date class="date"></date>
+      <div class="greeting-container">
+        <span class="greeting"></span>
+        <input type="text" class="name" value="" placeholder="[Введите имя]" />
+      </div>
+    </main>
+    <footer class="footer">
+      <button class="settings-image"></button>
+      <div class="settings">
+        <div class="close-settings"></div>
+        <div>
+          <p class="api"></p>
+          <select class="changeApi" name="" id="">
+            <option>GitHub</option>
+            <option>Unsplash API</option>
+            <option>Flickr API</option>
+          </select>
+        </div>
+        <div>
+          <p class="image-teg"></p>
+          <input type="radio" name="teg" class="classic-img" checked />
+          <label for="classic-img" class="label-classic-img"></label>
+          <input type="radio" name="teg" class="nature" />
+          <label for="nature" class="label-nature-img"></label>
+        </div>
+        <div>
+          <p class="hidden-block-settings"></p>
+          <div class="blocks-settings">
+            <div class="block-setting">
+              <div>
+                <label class="label-time" for="label-time"></label>
+                <input type="checkbox" class="time-settings" id="label-time" />
+              </div>
+              <div>
+                <label class="label-data" for="label-data"></label>
+                <input type="checkbox" class="data-settings" id="label-data" />
+              </div>
+              <div>
+                <label class="label-greeting" for="label-greeting"></label>
+                <input type="checkbox" class="greeting-settings" id="label-greeting" />
+              </div>
+            </div>
+            <div class="block-setting">
+              <div>
+                <label class="label-quote" for="label-quote"></label>
+                <input type="checkbox" class="quote-settings" id="label-quote" />
+              </div>
+              <div>
+                <label class="label-weather" for="label-weather"></label>
+                <input type="checkbox" class="weather-settings" id="label-weather" />
+              </div>
+              <div>
+                <label class="label-audio" for="label-audio"></label>
+                <input type="checkbox" class="audio-settings" id="label-audio" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="quote-author">
+        <button class="change-quote"></button>
+        <div class="quote"></div>
+        <div class="author"></div>
+      </div>
+      <div class="languages">
+        <div class="english">en</div>
+        <div class="russian">ru</div>
+      </div>
+    </footer>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/musicPlayer.js"></script>
+  </body>
+</html>
